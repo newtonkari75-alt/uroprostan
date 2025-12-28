@@ -113,47 +113,60 @@
         </div>
     </section>
 
-    <!-- Sessão 2: Seleção de País (Compacta) -->
+    <!-- Sessão 2: Seleção de País (Botões Ajustados) -->
     <section class="bg-white border-t border-gray-100 py-8" id="order">
         <div class="container mx-auto px-4 max-w-2xl">
             
             <div class="text-center mb-6">
                 <h2 id="country-title" class="text-xl md:text-2xl font-bold text-gray-900">Seleccione su envío</h2>
+                <p id="country-subtitle" class="text-sm text-gray-500 mt-2">Seleccione su destino de envío para liberar stock exclusivo.</p>
             </div>
 
             <div class="grid grid-cols-1 gap-4">
                 
-                <!-- Botão Espanha Compacto -->
-                <div onclick="selectCountry('es')" class="cursor-pointer group bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md hover:border-blue-500 transition-all duration-200 flex items-center justify-between active:scale-[0.99]">
-                    <div class="flex items-center gap-4">
-                        <img src="https://flagcdn.com/w80/es.png" alt="ES" class="h-8 w-12 rounded object-cover shadow-sm">
-                        <span id="btn-es-text" class="font-bold text-gray-900 text-lg">España</span>
-                    </div>
-                    <div class="flex flex-col items-end">
-                        <div class="inline-flex items-center gap-1.5 bg-red-50 text-red-600 px-2 py-1 rounded-md text-[10px] font-bold">
+                <!-- Botão Espanha -->
+                <div onclick="selectCountry('es')" class="cursor-pointer group bg-white border-2 border-gray-100 rounded-xl p-4 hover:border-blue-500 hover:shadow-md transition-all duration-200 flex items-center gap-4 active:scale-[0.98]">
+                    <!-- Bandeira -->
+                    <img src="https://flagcdn.com/w80/es.png" alt="ES" class="h-10 w-14 rounded object-cover shadow-sm shrink-0">
+                    
+                    <!-- Textos -->
+                    <div class="flex flex-col items-start">
+                        <span id="btn-es-text" class="font-bold text-gray-900 text-lg leading-tight">España</span>
+                        <span id="card-es-stock" class="text-xs font-bold text-red-600 flex items-center gap-1.5 mt-0.5">
                             <span class="relative flex h-2 w-2">
                               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                               <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
                             </span>
-                            <span id="card-es-stock">7 unidades</span>
-                        </div>
+                            Últimas unidades
+                        </span>
+                    </div>
+
+                    <!-- Seta -->
+                    <div class="ml-auto opacity-30 group-hover:opacity-100 transition-opacity">
+                         <svg class="w-5 h-5 text-gray-500 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </div>
                 </div>
 
-                <!-- Botão Itália Compacto -->
-                <div onclick="selectCountry('it')" class="cursor-pointer group bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md hover:border-green-500 transition-all duration-200 flex items-center justify-between active:scale-[0.99]">
-                    <div class="flex items-center gap-4">
-                        <img src="https://flagcdn.com/w80/it.png" alt="IT" class="h-8 w-12 rounded object-cover shadow-sm">
-                        <span id="btn-it-text" class="font-bold text-gray-900 text-lg">Italia</span>
-                    </div>
-                    <div class="flex flex-col items-end">
-                        <div class="inline-flex items-center gap-1.5 bg-red-50 text-red-600 px-2 py-1 rounded-md text-[10px] font-bold">
+                <!-- Botão Itália -->
+                <div onclick="selectCountry('it')" class="cursor-pointer group bg-white border-2 border-gray-100 rounded-xl p-4 hover:border-green-500 hover:shadow-md transition-all duration-200 flex items-center gap-4 active:scale-[0.98]">
+                    <!-- Bandeira -->
+                    <img src="https://flagcdn.com/w80/it.png" alt="IT" class="h-10 w-14 rounded object-cover shadow-sm shrink-0">
+                    
+                    <!-- Textos -->
+                    <div class="flex flex-col items-start">
+                        <span id="btn-it-text" class="font-bold text-gray-900 text-lg leading-tight">Italia</span>
+                        <span id="card-it-stock" class="text-xs font-bold text-red-600 flex items-center gap-1.5 mt-0.5">
                             <span class="relative flex h-2 w-2">
                               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                               <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
                             </span>
-                            <span id="card-it-stock">5 unidades</span>
-                        </div>
+                            Ultime unità
+                        </span>
+                    </div>
+
+                    <!-- Seta -->
+                    <div class="ml-auto opacity-30 group-hover:opacity-100 transition-opacity">
+                         <svg class="w-5 h-5 text-gray-500 group-hover:text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </div>
                 </div>
 
@@ -183,12 +196,13 @@
                 ben4Title: "Mejora",
                 ben4Desc: "La vida sexual",
                 countryTitle: "Seleccione su envío",
+                countrySubtitle: "Seleccione su destino de envío para liberar stock exclusivo.",
                 footerRights: "&copy; 2024 Uroprostan. Derechos reservados.",
                 
-                cardEsStock: "7 unidades",
+                cardEsStock: "Últimas unidades",
                 btnEsText: "España",
                 
-                cardItStock: "5 unidades", 
+                cardItStock: "Ultime unità", 
                 btnItText: "Italia"      
             },
             it: {
@@ -204,12 +218,13 @@
                 ben4Title: "Migliora",
                 ben4Desc: "La vita sessuale",
                 countryTitle: "Seleziona la spedizione",
+                countrySubtitle: "Seleziona la destinazione di spedizione per sbloccare lo stock esclusivo.",
                 footerRights: "&copy; 2024 Uroprostan. Diritti riservati.",
                 
-                cardEsStock: "7 unità",
+                cardEsStock: "Últimas unidades",
                 btnEsText: "Spagna",
 
-                cardItStock: "5 unità",
+                cardItStock: "Ultime unità",
                 btnItText: "Italia"
             }
         };
@@ -238,13 +253,20 @@
                 document.getElementById('ben-4-desc').textContent = t.ben4Desc;
 
                 document.getElementById('country-title').textContent = t.countryTitle;
+                document.getElementById('country-subtitle').textContent = t.countrySubtitle;
                 document.getElementById('footer-rights').innerHTML = t.footerRights;
 
                 // Update text inside the buttons
-                if(document.getElementById('card-es-stock')) document.getElementById('card-es-stock').textContent = t.cardEsStock;
+                // Aqui usamos innerHTML se precisarmos manter o ponto, mas como o ponto está no HTML fixo,
+                // vamos atualizar apenas o texto final usando nodes ou simplesmente innerHTML completo com o span.
+                // Para simplificar e garantir que o ponto vermelho fique, vamos reconstruir o innerHTML do span de estoque.
+                
+                const dotHtml = `<span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span></span>`;
+                
+                if(document.getElementById('card-es-stock')) document.getElementById('card-es-stock').innerHTML = `${dotHtml} ${t.cardEsStock}`;
                 if(document.getElementById('btn-es-text')) document.getElementById('btn-es-text').textContent = t.btnEsText;
 
-                if(document.getElementById('card-it-stock')) document.getElementById('card-it-stock').textContent = t.cardItStock;
+                if(document.getElementById('card-it-stock')) document.getElementById('card-it-stock').innerHTML = `${dotHtml} ${t.cardItStock}`;
                 if(document.getElementById('btn-it-text')) document.getElementById('btn-it-text').textContent = t.btnItText;
             }
         }
